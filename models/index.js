@@ -12,7 +12,6 @@ Product.belongsTo(Category, {
 Category.hasMany(Product, {
   // Define the third table needed to store the foreign keys
   foreignKey: "category_id",
-  
 });
 // Products belongToMany Tags (through ProductTag)
 Product.belongsToMany(Tag, {
@@ -23,7 +22,7 @@ Product.belongsToMany(Tag, {
   },
   // Define an alias for when data is retrieved
   // as: "tagged_product",
-  foreginKey: 'product_id',
+  foreginKey: "product_id",
 });
 // Tags belongToMany Products (through ProductTag)
 Tag.belongsToMany(Product, {
@@ -34,7 +33,7 @@ Tag.belongsToMany(Product, {
   },
   // Define an alias for when data is retrieved
   as: "tagged_product",
-  foreginKey: 'tag_id'
+  foreginKey: "tag_id",
 });
 
 module.exports = {
